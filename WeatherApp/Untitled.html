@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style1.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <title>Weather App</title>
+</head>
+
+<body>
+   
+    <div class="navbar-toggler-icon" onclick="myFunction(this)">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <ul>
+            <li><a>Home</a></li>
+            <li><a>About</a></li>
+            <li><a>Contact Us</a></li>
+        </ul>
+    </div>
+    
+    <h1>
+        Weather Today
+       <h1 style="font-size:20px;">Click city to Chcek Weather</h1>
+    </h1>  
+    
+    <div class="city">Sweden
+    </div>
+        <div class="temperature">18C
+             
+            </div> 
+        </div>
+</body>
+<script type="text/javascript">
+    var temp=["California","Sweden","NYC"]
+  var cities=["20C","25C","19C"]
+  $(document).ready(function(){
+   $(".city").click(function(){
+    $(this).text(cities[i]);
+    $(".temperature").text(temp[i]);
+   i=i+1;
+   if(i==3){
+       i=0;
+   }
+  });
+});
+</script>
+
+</html>
